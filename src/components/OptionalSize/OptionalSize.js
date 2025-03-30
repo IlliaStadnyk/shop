@@ -19,7 +19,7 @@ const OptionalSize = props => {
 }
 
 OptionalSize.propTypes = {
-    sizes: PropTypes.array.isRequired,
+    sizes: PropTypes.arrayOf(PropTypes.shape({name: PropTypes.string.isRequired})).isRequired,
     currentSize: PropTypes.string.isRequired,
     setCurrentSize: PropTypes.func.isRequired,
 }

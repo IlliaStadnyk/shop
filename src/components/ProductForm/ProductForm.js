@@ -17,8 +17,8 @@ const ProductForm = props => {
 }
 
 ProductForm.propTypes = {
-    colors: PropTypes.array.isRequired,
-    sizes: PropTypes.array.isRequired,
+    colors: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    sizes: PropTypes.arrayOf(PropTypes.shape({name: PropTypes.string.isRequired})).isRequired,
     currentColor: PropTypes.string.isRequired,
     currentSize: PropTypes.string.isRequired,
     setCurrentSize: PropTypes.func.isRequired,

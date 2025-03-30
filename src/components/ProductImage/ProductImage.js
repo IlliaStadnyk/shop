@@ -13,7 +13,7 @@ const ProductImage = props => {
 }
 
 ProductImage.propTypes = {
-    currentColor: PropTypes.string,
-    name: PropTypes.string,
+    currentColor: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
 }
 export default ProductImage
